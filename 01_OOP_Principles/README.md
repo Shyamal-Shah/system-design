@@ -1,11 +1,10 @@
 # Object-Oriented Programming (OOP) Principles
 
-Every software engineer learns about Object-Oriented Programming (OOP) principles early in their career most probably in their first programming course. Generally , these principles are explained using very basic examples of cars, shapes, animals etc.
+Every software engineer learns about Object-Oriented Programming (OOP) principles early in their career most probably in their first programming course. Generally, these principles are explained using very basic examples of cars, shapes, animals etc.
 
-However,
-not every engineer actually grasps how to use these principles, why they matter, and how to incorporate OOP principles into their code.
+However, not every engineer actually grasps how to use these principles, why they matter, and how to incorporate OOP principles into their code.
 
-This document aims to provide a comprehensive overview of the core principles of OOP, their definitions, and how they can be applied in software development using an real life example of Order management system. The example will illustrate how these principles can be used to create a robust, scalable, and maintainable system.
+This document aims to provide a comprehensive overview of the core principles of OOP, their definitions, and how they can be applied in software development using an example of an Order management system. The example will illustrate how these principles can be used to create a robust, scalable, and maintainable system.
 
 ## 1. Encapsulation:
 
