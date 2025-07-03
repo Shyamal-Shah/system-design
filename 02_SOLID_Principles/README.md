@@ -285,3 +285,5 @@ This example shows that the class `Order` does not depend on a concrete implemen
 ## Conclusion:
 
 The SOLID principles are not complicated, but they are often misunderstood or not applied correctly. By following these principles, we can write code that is easier to maintain, extend, and understand. The example of the Order management system illustrates how these principles can be applied in practice to create a robust, scalable, and maintainable system.
+
+**Next:** Explore various [Design Patterns](../03_Design_Patterns/README.md) to further enhance your software design skills.

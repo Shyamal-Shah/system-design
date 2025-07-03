@@ -1,0 +1,15 @@
+# Behavioral Design Patterns
+
+Behavioral design patterns defines how the objects in a system interact and communicate with each other including how data and control flows between them. They are particularly useful in scenarios where objects need to collaborate or communicate in complex ways.
+
+We will cover various behavioral design patterns, including:
+
+- [Strategy](./Strategy/README.md)
+
+Each pattern will be explained with:
+
+- A clear definition of the pattern.
+- A real-world scenario where the pattern can be applied.
+- An example of how the pattern can be implemented.
+- An explanation of why the pattern is useful and how it can improve code maintainability and flexibility.
+- A discussion of the trade-offs and considerations when using the pattern.
