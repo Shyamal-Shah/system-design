@@ -60,5 +60,5 @@ Observer pattern allows systems to support feature expansion with minimal change
 
 ### References
 
--   [Wikipedia - Observer Pattern](https://en.wikipedia.org/wiki/Observer_pattern)
--   [Refactoring Guru - Observer Pattern](https://refactoring.guru/design-patterns/observer)
+- [Wikipedia - Observer Pattern](https://en.wikipedia.org/wiki/Observer_pattern)
+- [Refactoring Guru - Observer Pattern](https://refactoring.guru/design-patterns/observer)

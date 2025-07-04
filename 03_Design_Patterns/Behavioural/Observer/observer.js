@@ -1,108 +1,107 @@
 // Publisher is the subject in the Observer pattern
 // It maintains a list of subscribers and notifies them of any state changes.
 class Publisher {
-	constructor() {
-		this.subscribers = [];
-		this.state = null;
-	}
+  constructor() {
+    this.subscribers = [];
+    this.state = null;
+  }
 
-	register(subscriber) {
-		// Register a new subscriber
-		this.subscribers.push(subscriber);
-	}
+  register(subscriber) {
+    // Register a new subscriber
+    this.subscribers.push(subscriber);
+  }
 
-	unregister(subscriber) {
-		// Unregister an existing subscriber
-		this.subscribers = this.subscribers.filter((sub) => sub !== subscriber);
-	}
+  unregister(subscriber) {
+    // Unregister an existing subscriber
+    this.subscribers = this.subscribers.filter((sub) => sub !== subscriber);
+  }
 
-	notify(data) {
-		// Notify all subscribers with the provided data
-		this.subscribers.forEach((subscriber) => subscriber.update(data));
-	}
+  notify(data) {
+    // Notify all subscribers with the provided data
+    this.subscribers.forEach((subscriber) => subscriber.update(data));
+  }
 
-	setState(data) {
-		// Set the state and notify subscribers
-		this.notify(data);
-	}
+  setState(data) {
+    // Set the state and notify subscribers
+    this.notify(data);
+  }
 }
 
 // Subscriber is the observer in the Observer pattern
 // It defines an update method that will be called by the publisher when the state changes.
 class Subscriber {
-	constructor(name) {
-		this.name = name;
-	}
-	update(data) {
-		console.log(`Subscriber ${this.name} received update: ${data}`);
-	}
+  constructor(name) {
+    this.name = name;
+  }
+  update(data) {
+    console.log(`Subscriber ${this.name} received update: ${data}`);
+  }
 }
 
 // OrderService is the publisher in the Observer pattern
 // It manages orders and notifies subscribers when an order is processed.
 class OrderService extends Publisher {
-	constructor() {
-		super();
-		this.orders = [];
-	}
+  constructor() {
+    super();
+    this.orders = [];
+  }
 
-	addOrder(orderId, totalAmount) {
-		this.orders.push({ orderId, totalAmount });
-		console.log(`Order added: ID=${orderId}, Total Amount=${totalAmount}`);
-	}
+  addOrder(orderId, totalAmount) {
+    this.orders.push({ orderId, totalAmount });
+    console.log(`Order added: ID=${orderId}, Total Amount=${totalAmount}`);
+  }
 
-	processOrder(orderId) {
-		const order = this.orders.find((o) => o.orderId === orderId);
-		if (order) {
-			console.log(`\nProcessing order ID: ${orderId}`);
-			this.setState(order);
-		}
-	}
+  processOrder(orderId) {
+    const order = this.orders.find((o) => o.orderId === orderId);
+    if (order) {
+      console.log(`\nProcessing order ID: ${orderId}`);
+      this.setState(order);
+    }
+  }
 }
 
 // InventoryService is a subscriber that listens for order updates
 // It handles inventory management when an order is processed.
 class InventoryService extends Subscriber {
-	constructor(orderService) {
-		super("InventoryService");
-		this.orderService = orderService;
-		this.orderService.register(this);
-	}
+  constructor(orderService) {
+    super("InventoryService");
+    this.orderService = orderService;
+    this.orderService.register(this);
+  }
 
-	update(order) {
-		console.log(`InventoryService: Shipping the order: ${order.orderId}`);
-	}
+  update(order) {
+    console.log(`InventoryService: Shipping the order: ${order.orderId}`);
+  }
 }
 
 // AnalyticsService is a subscriber that listens for order updates
 // It records metrics for each order processed.
 class AnalyticsService extends Subscriber {
-	constructor(orderService) {
-		super("AnalyticsService");
-		this.orderService = orderService;
-		this.orderService.register(this);
-	}
-	update(order) {
-		console.log(
-			`AnalyticsService: Recording metrics for order ${order.orderId}, amount: ${order.totalAmount}`
-		);
-	}
+  constructor(orderService) {
+    super("AnalyticsService");
+    this.orderService = orderService;
+    this.orderService.register(this);
+  }
+  update(order) {
+    console.log(
+      `AnalyticsService: Recording metrics for order ${order.orderId}, amount: ${order.totalAmount}`
+    );
+  }
 }
 
 // EmailService is a subscriber that listens for order updates
-// It sends confirmation emails for each order processed.
 class EmailService extends Subscriber {
-	constructor(orderService) {
-		super("EmailService");
-		this.orderService = orderService;
-		this.orderService.register(this);
-	}
+  constructor(orderService) {
+    super("EmailService");
+    this.orderService = orderService;
+    this.orderService.register(this);
+  }
 
-	update(order) {
-		console.log(
-			`EmailService: Sending confirmation for order: ${order.orderId} with amount: ${order.totalAmount}`
-		);
-	}
+  update(order) {
+    console.log(
+      `EmailService: Sending confirmation for order: ${order.orderId} with amount: ${order.totalAmount}`
+    );
+  }
 }
 
 // Example usage
