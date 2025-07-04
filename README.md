@@ -20,6 +20,7 @@ Here’s how the content is structured:
 
 1. [OOP Principles](01_OOP_Principles/README.md) – Core Object-Oriented Programming concepts with real-world examples
 2. [SOLID Principles](02_SOLID_Principles/README.md) – SOLID design principles explained practically
+3. [Design Patterns](03_Design_Patterns/README.md) – Design patterns explained with real-world examples and code snippets
 
 ### 🚀 Note
 
