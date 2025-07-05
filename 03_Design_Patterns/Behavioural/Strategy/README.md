@@ -24,7 +24,6 @@ class DescendingSort(SortStrategy):
 class LengthSort(SortStrategy):
     def sort(self, data):
         return sorted(data, key=len)
-
 ```
 
 ### Real-World Scenario
@@ -51,5 +50,5 @@ Strategy pattern allows systems to support feature expansion with minimal change
 
 ### References
 
--   [Wikipedia - Strategy Pattern](https://en.wikipedia.org/wiki/Strategy_pattern)
--   [Refactoring Guru - Strategy Pattern](https://refactoring.guru/design-patterns/strategy)
+- [Wikipedia - Strategy Pattern](https://en.wikipedia.org/wiki/Strategy_pattern)
+- [Refactoring Guru - Strategy Pattern](https://refactoring.guru/design-patterns/strategy)

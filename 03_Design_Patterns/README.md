@@ -7,3 +7,4 @@ By employing these design patterns in our code, we can create software that is e
 I will try to cover various categories of design patterns solving different problems and scenarios, including:
 
 - [Behavioral](./Behavioural/README.md)
+- [Structural](./Structural/README.md)
