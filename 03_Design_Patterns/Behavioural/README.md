@@ -4,8 +4,8 @@ Behavioral design patterns defines how the objects in a system interact and comm
 
 I will cover various behavioral design patterns, including:
 
-- [Strategy](./Strategy/README.md)
 - [Observer](./Observer/README.md)
+- [Strategy](./Strategy/README.md)
 
 Each pattern will be explained with:
 

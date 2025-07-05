@@ -5,6 +5,7 @@ Structural design patterns are generally used to define how the classes and obje
 I will cover various structural design patterns, including the following:
 
 - [Decorator](./Decorator/README.md)
+- [Proxy](./Proxy/README.md)
 
 Each pattern will be explained with:
 
