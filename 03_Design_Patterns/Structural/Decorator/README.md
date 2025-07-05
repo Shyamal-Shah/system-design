@@ -37,11 +37,11 @@ print(f"Cost of espresso with milk and sugar: {espresso_with_sugar.cost()}")
 
 ### Real-World Scenario
 
-Imagine we are building a order management system. We have a base class `Order` that represents an order. Now we want to add different features to the order such as discounts, taxes, and shipping fees. We can start by creating subclasses for each combination of features (e.g., `OrderWithDiscount`, `OrderWithTax`, `OrderWithTaxAndDiscount` etc.).
+Imagine we are building an order management system. We have a base class `Order` that represents an order. Now we want to add different features to the order such as discounts, taxes, and shipping fees. We can start by creating subclasses for each combination of features (e.g., `OrderWithDiscount`, `OrderWithTax`, `OrderWithTaxAndDiscount` etc.).
 
 We are good to go, right? Not really. What if we want to add more features in the future such as gift wrapping or priority shipping? We would have to create new subclasses for each new feature, leading to even more complexity and making the code harder to maintain. This approach leads to **2^n** classes where n is the number of features. With just 3 features, we need 8 classes! This is called **class explosion**.
 
-To solve this problem, we can use the decorator pattern. We define a base class `Order` and a decorator abstract class called `OrderDecorator` which extends the base class and takes an Order object as a parameter. Now for each feature we create individual classes that extend the `OrderDecorator` class and add the desired feature.
+To solve this problem, we use the decorator pattern. We define a base class `Order` and a decorator abstract class called `OrderDecorator` which extends the base class and takes an Order object as a parameter. Now for each feature we create individual classes that extend the `OrderDecorator` class and add the desired feature.
 
 This way we can keep on extending the feature list and have an infinite number of combinations of features without increasing the number of classes from n to 2^n.
 

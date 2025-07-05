@@ -45,38 +45,43 @@ class SubscriptionOrder extends Order {
 }
 
 class OrderFactory {
-  static createOrder(orderId, totalAmount, orderType, additionalInfo) {
-    switch (orderType) {
-      case "online":
-        return new OnlineOrder(orderId, totalAmount, additionalInfo);
-      case "physical":
-        return new PhysicalOrder(orderId, totalAmount, additionalInfo);
-      case "subscription":
-        return new SubscriptionOrder(orderId, totalAmount, additionalInfo);
-      default:
-        throw new Error("Invalid order type");
-    }
+  static createOrder() {
+    throw new Error("Method 'createOrder()' must be implemented.");
+  }
+}
+
+class OnlineOrderFactory extends OrderFactory {
+  static createOrder(orderId, totalAmount, deliveryAddress) {
+    return new OnlineOrder(orderId, totalAmount, deliveryAddress);
+  }
+}
+class PhysicalOrderFactory extends OrderFactory {
+  static createOrder(orderId, totalAmount, storeLocation) {
+    return new PhysicalOrder(orderId, totalAmount, storeLocation);
+  }
+}
+
+class SubscriptionOrderFactory extends OrderFactory {
+  static createOrder(orderId, totalAmount, subscriptionDuration) {
+    return new SubscriptionOrder(orderId, totalAmount, subscriptionDuration);
   }
 }
 
 // Example usage
-const onlineOrder = OrderFactory.createOrder(
+const onlineOrder = OnlineOrderFactory.createOrder(
   1,
   100,
-  "online",
   "Vadodara, Gujarat, India"
 );
 
-const physicalOrder = OrderFactory.createOrder(
+const physicalOrder = PhysicalOrderFactory.createOrder(
   2,
   200,
-  "physical",
   "Store #5, Vadodara"
 );
-const subscriptionOrder = OrderFactory.createOrder(
+const subscriptionOrder = SubscriptionOrderFactory.createOrder(
   3,
   300,
-  "subscription",
   "6 months"
 );
 

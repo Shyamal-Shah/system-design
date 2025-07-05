@@ -4,7 +4,6 @@ Creational design patterns are generally used to define how to create objects in
 
 I will cover various Creational design patterns, including the following:
 
-- [Simple Factory](./Simple_Factory/README.md)
 - [Factory](./Factory/README.md)
 - [Abstract Factory](./Abstract_Factory/README.md)
 
