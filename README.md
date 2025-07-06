@@ -21,7 +21,20 @@ Here’s how the content is structured:
 1. [OOP Principles](01_OOP_Principles/README.md) – Core Object-Oriented Programming concepts with real-world examples
 2. [SOLID Principles](02_SOLID_Principles/README.md) – SOLID design principles explained practically
 3. [Design Patterns](03_Design_Patterns/README.md) – Design patterns explained with real-world examples and code snippets
+
+   - [Creational Patterns](03_Design_Patterns/Creational/README.md)
+     - [Factory Method](03_Design_Patterns/Creational/Factory_Method/README.md)
+     - [Abstract Factory](03_Design_Patterns/Creational/Abstract_Factory/README.md)
+   - [Structural Patterns](03_Design_Patterns/Structural/README.md)
+     - [Decorator](03_Design_Patterns/Structural/Decorator/README.md)
+     - [Proxy](03_Design_Patterns/Structural/Proxy/README.md)
+   - [Behavioral Patterns](03_Design_Patterns/Behavioral/README.md)
+     - [Strategy](03_Design_Patterns/Behavioral/Strategy/README.md)
+     - [Observer](03_Design_Patterns/Behavioral/Observer/README.md)
+
 4. [LLD Problems](./LLD_Problems/) - Many types of LLD problems with solutions, design patterns used, and implementation details
+   - [Core LLD Problems](./LLD_Problems/Core/README.md)
+     - [Parking Lot](./LLD_Problems/Core/Parking_Lot/README.md)
 
 ### 🚀 Note
 
