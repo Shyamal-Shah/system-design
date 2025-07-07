@@ -6,6 +6,7 @@ I will cover various Creational design patterns, including the following:
 
 - [Factory](./Factory/README.md)
 - [Abstract Factory](./Abstract_Factory/README.md)
+- [Singleton](./Singleton/README.md)
 
 Each pattern will be explained with:
 
