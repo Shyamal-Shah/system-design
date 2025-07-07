@@ -26,6 +26,7 @@ Here’s how the content is structured:
      - [Factory Method](03_Design_Patterns/Creational/Factory/README.md)
      - [Abstract Factory](03_Design_Patterns/Creational/Abstract_Factory/README.md)
      - [Singleton](03_Design_Patterns/Creational/Singleton/README.md)
+     - [Prototype](03_Design_Patterns/Creational/Prototype/README.md)
    - [Structural Patterns](03_Design_Patterns/Structural/README.md)
      - [Decorator](03_Design_Patterns/Structural/Decorator/README.md)
      - [Proxy](03_Design_Patterns/Structural/Proxy/README.md)
