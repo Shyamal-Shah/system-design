@@ -6,6 +6,7 @@ I will cover various behavioral design patterns, including:
 
 - [Observer](./Observer/README.md)
 - [Strategy](./Strategy/README.md)
+- [Chain of Responsibility](./Chain_of_Responsibility/README.md)
 
 Each pattern will be explained with:
 

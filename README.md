@@ -34,6 +34,7 @@ Here’s how the content is structured:
    - [Behavioral Patterns](03_Design_Patterns/Behavioral/README.md)
      - [Strategy](03_Design_Patterns/Behavioral/Strategy/README.md)
      - [Observer](03_Design_Patterns/Behavioral/Observer/README.md)
+     - [Chain of Responsibility](03_Design_Patterns/Behavioral/Chain_of_Responsibility/README.md)
 
 4. [LLD Problems](./LLD_Problems/) - Many types of LLD problems with solutions, design patterns used, and implementation details
    - [Core LLD Problems](./LLD_Problems/Core/README.md)

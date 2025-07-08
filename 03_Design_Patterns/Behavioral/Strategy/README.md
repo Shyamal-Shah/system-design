@@ -34,7 +34,7 @@ We are good to go, right? Not really. What if we want to add more payment method
 
 This solution would impact the testing process and the deployment process, since we would need to retest the entire `OrderService` class for every small change. This can also lead to raising conflicts in a team environment where multiple developers are working on the same class.
 
-To solve this problem, we can use the Strategy pattern. We define an abstract class `PaymentStrategy` in design intent, even though JS does not enforce it with a method `processPayment` that takes the order and payment details as parameters. Then, we implement different payment methods as separate classes that implement the `PaymentStrategy` interface.
+To solve this problem, we can use the Strategy pattern. We define an abstract class `PaymentStrategy` with a method `processPayment` that takes the order and payment details as parameters. Then, we implement different payment methods as separate classes that implement the `PaymentStrategy` interface.
 
 This way, we can easily add new payment methods without modifying the `OrderService` class. Each payment method can have its own implementation of the `processPayment` method, and we can switch between them at runtime based on the user's choice.
 
@@ -42,7 +42,7 @@ Please find the code implementation of the Strategy pattern in the [`strategy.js
 
 ### Why it matters
 
-The strategy pattern allows us to encapsulate different algorithms or behaviors in separate classes, making our code more modular and easier to maintain. It promotes the Open/Closed Principle, which states that classes should be open for extension but closed for modification. This pattern also enhances testability by allowing mocking or injecting different strategies during testing.
+The strategy pattern allows us to encapsulate different algorithms or behaviors in separate classes, making our code more modular and easier to maintain. It promotes the Liskov's Substitution Principle, which states that classes should be substitutable for their base classes. This pattern also enhances testability by allowing mocking or injecting different strategies during testing.
 
 ### System Design Impact
 
