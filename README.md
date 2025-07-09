@@ -39,6 +39,8 @@ Here’s how the content is structured:
 4. [LLD Problems](./LLD_Problems/) - Many types of LLD problems with solutions, design patterns used, and implementation details
    - [Core LLD Problems](./LLD_Problems/Core/README.md)
      - [Parking Lot](./LLD_Problems/Core/Parking_Lot/README.md)
+   - [Games](./LLD_Problems/Games/README.md) - LLD problems related to games, which often involve complex interactions and state management
+     - [TicTacToe](./LLD_Problems/Games/TicTacToe/README.md)
 
 ### 🚀 Note
 
