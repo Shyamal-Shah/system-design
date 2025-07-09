@@ -24,26 +24,26 @@ The `MARK` enum will have the following values by default.
 
 ### Player
 
-We next define an interface or abstract class for `Player` representing the players of the game. The reason of choosing an interface or abstract class is that we can implement or extend it to `HumanPlayer` and `AIPlayer` in the future. For now we will have `HumanPlayer`.
+We next define an interface or abstract class called `AbstractPlayer` representing the players of the game. The reason of choosing an interface or abstract class is that we can implement or extend it to `HumanPlayer` and `AIPlayer` in the future. For now we will have `HumanPlayer`.
 
 It will have the following properties:
 
+- ID
 - Name
 - Mark (`MARK`)
 
 It has following methods:
 
-- setSymbol()
-- getSymbol()
+- getMark()
 - playTurn() -> User selects the free place on the board to mark
 
 # PlayerFactory
 
-We create a Factory `IPlayerFactory` interface for creating `Player` objects based on the user selection. Also create `HumanPlayerFactory` and `AIPlayerFactory` concrete classes implementing `IPlayerFactory`.
+We create a Factory `IPlayerFactory` interface for creating `AbstractPlayer` objects based on the user selection. Also create `HumanPlayerFactory` and `AIPlayerFactory` in future concrete classes implementing `IPlayerFactory`.
 
 It has following method:
 
-- createPlayer() -> Returns object of `Player`
+- createPlayer() -> Returns object of `AbstractPlayer`
 
 ### Board
 
@@ -52,19 +52,24 @@ This will represent the current state of the game. This class will handle the cr
 It will be have the following properties:
 
 - Board State -> Matrix which of type `MARK`
-- playerCounter [{
+- playerStates [{
   rowCounts[N]: [],
   columnCounts[N]: [],
   diagonalCount: 0,
   antiDiagonalCount: 0,
   }] -> Per player Counters for rows, columns, and both diagonals
+- totalTurns -> Tracks each player's row, column, diagonal, and anti-diagonal counts separately
+- boardSize -> Size of the board (NxN)
 
 It will have following methods:
 
 - constructor(N) -> to setup board of size NxN
+- addPlayerState(player) -> Initializes the player state in the board
 - printState() -> shows the current state of the game
+- isDraw() -> to check if the game is a draw
+- isValidMove(row, col) -> to check if the move is valid
 - testWinCondition(player) -> to test the wining condition in O(1) using
-- updateState(row, col, Mark) -> Updates the state of the game
+- updateState(player, row, col) -> Updates the state of the game
 - resetBoardState() -> Clears the board for a new Game
 
 ### Game
@@ -79,14 +84,26 @@ It will have following methods:
 
 - initializePlayer(N) -> create N players in the game of Human or AI type
 - resetGame() -> resets the players and board state
-- startGame() -> A loop till testWinCondition() return Draw or a winner Player. Player's playTurn is called and state is updated with their mark.
+- startGame() -> A loop till testWinCondition() return a winner Player or isDraw() is true. Player's playTurn is called and state is updated with their mark.
 
 ## Project Structure
+
+```css
+src/
+ ├── AbstractPlayer.ts
+ ├── Board.ts
+ ├── Game.ts
+ ├── HumanPlayer.ts
+ ├── HumanPlayerFactory.ts
+ ├── index.ts
+ ├── IPlayerFactory.ts
+ └── MARK.ts
+```
 
 ## Design Patterns Used
 
 **Strategy Pattern:** Different algorithms for Player's `playTurn()` method
-**Factory Pattern:** Player creation using HumanPlayerFactory, AIPlayerFactory
+**Factory Pattern:** Player creation using HumanPlayerFactory, AIPlayerFactory (in future)
 **Singleton Pattern:** Optional for Game orchestrator
 **Template Method:** The startGame() defines the skeleton of game execution with playTurn methods
 
@@ -109,10 +126,4 @@ npm install
 
 ```bash
 npx ts-node src/index.ts
-```
-
-Initialize a type script project if not already done:
-
-```bash
-
 ```

@@ -39,4 +39,4 @@ No additional constraints were specified, but the design should be flexible enou
 
 ## Solution Design
 
-Find the detailed design in the [Solution](./Solution/README.md) file.
+Find the detailed design in the [Solution](./Solution/README.md) file and the TypeScript implementation in [Solution/src](./Solution/src/).
