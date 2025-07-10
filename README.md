@@ -37,10 +37,14 @@ Here’s how the content is structured:
      - [Chain of Responsibility](03_Design_Patterns/Behavioral/Chain_of_Responsibility/README.md)
 
 4. [LLD Problems](./LLD_Problems/) - Many types of LLD problems with solutions, design patterns used, and implementation details
+
    - [Core LLD Problems](./LLD_Problems/Core/README.md)
      - [Parking Lot](./LLD_Problems/Core/Parking_Lot/README.md)
    - [Games](./LLD_Problems/Games/README.md) - LLD problems related to games, which often involve complex interactions and state management
      - [TicTacToe](./LLD_Problems/Games/TicTacToe/README.md)
+
+5. [HLD Concepts](04_HLD_Concepts/README.md) - Fundamental concepts required before diving into designing scalable, efficient, and robust systems
+   - [Networking](04_HLD_Concepts/Network_Protocols/README.md)
 
 ### 🚀 Note
 
