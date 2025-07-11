@@ -45,6 +45,9 @@ Here’s how the content is structured:
 
 5. [HLD Concepts](04_HLD_Concepts/README.md) - Fundamental concepts required before diving into designing scalable, efficient, and robust systems
    - [Networking](04_HLD_Concepts/Network_Protocols/README.md)
+     - OSI Model, TCP/IP Model, Common Network Protocols (TCP, UDP, HTTP, HTTPS, WebSocket, FTP, SFTP, FTPS, SSH, SMTP, IMAP, POP3, WebRTC)
+   - [Databases](04_HLD_Concepts/Databases/README.md)
+     - [CAP Theorem](04_HLD_Concepts/Databases/CAP_Theorem/README.md)
 
 ### 🚀 Note
 

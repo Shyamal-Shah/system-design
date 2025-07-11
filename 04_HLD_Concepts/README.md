@@ -7,3 +7,4 @@ By understanding these concepts, you can make informed decisions about how to st
 I will try to cover various categories of HLD concepts, including:
 
 - [Networking](Network_Protocols/README.md)
+- [Databases](Databases/README.md)
