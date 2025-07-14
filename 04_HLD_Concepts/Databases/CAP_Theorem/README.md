@@ -32,7 +32,7 @@ In this scenario, the system prioritizes consistency and availability, but it ca
 
 This scenario is not practical in a distributed system, as network partitions are inevitable, and the system would become unusable during those partitions.
 
-## Practical Strategies to Achieve CAP
+## Practical Strategies to Achieve Consistency
 
 ### 1. Eventual Consistency
 
@@ -57,6 +57,30 @@ For example, in a distributed database, you can configure the system to require 
 In this approach, the system uses a quorum (a majority as in voting) of nodes to achieve consistency and availability. A write is considered successful only when a majority of nodes acknowledge it, and a read is successful if it can be satisfied by a quorum of nodes.
 
 For example, in distributed databases like Cassandra, a write is successful when it is acknowledged by a majority of nodes, ensuring that the data is consistent across the system while still allowing for high availability.
+
+## Practical Strategies to Achieve Availability - Fail-Over
+
+Fail-Over patterns handles the service availability continuously through switch from a failed system to a redundant system.
+
+### 1. Active-Passive (Master-Slave) Fail-Over
+
+In the Active-Passive Fail-Over system, one node acts as a primary system and handles all the traffic. A passive standby service is kept in-sync via heart beats or health checks. During failure, the passive automatically takes over adopting the master's(Active) ip and hostname.
+
+Downtime depends on whether the passive (slave) node is already running called hot standby or needs to boot called cold standby.
+
+Its simple to configure, easier to maintain and uses less resources. It might have short downtime and data loss based if replication lag exists.
+
+Use cases include financial systems, mission‑critical services where downtime must be minimized.
+
+### 2. Active-Active (Master-Master) Fail-Over
+
+In the Active-Active Fail-Over system, all the nodes are serving traffic spreading the load between them. Generally a load balancer handles the distribution of requests to all the nodes. During failure, the load balancer diverts all the traffic away form faulted node.
+
+This system requires synchronized data for consistency and promotes low down time, due to seamless failover, has better resource utilization,scalable performance and reduced latency via geographic distribution.
+
+However, this system is complex, requires additional resources like load balancers, consistent replication, split-brain prevention and quorum mechanisms.
+
+Use Cases include high throughput applications like web services, distributed databases, global-scale platforms
 
 ## PACELC Theorem
 
