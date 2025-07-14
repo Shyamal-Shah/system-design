@@ -2,7 +2,7 @@
 
 ## What does it mean?
 
-Monolithic architecture in the most basic terms means that the entire system is developed, built and deployed as a single unit. All the components of the system: the UI, business logic, and data access layer and sometimes even the database are packaged and deployed together.
+Monolithic architecture in the most basic terms means that the entire system is developed, built and deployed as a single unit. All the components of the system: the UI, business logic, and data access layer and database is usually separate but closely integrated.
 
 The whole system is tightly coupled, meaning that any change in one module of the system requires the entire system to be rebuilt and redeployed.
 
@@ -24,8 +24,9 @@ The whole system is tightly coupled, meaning that any change in one module of th
 
 ## Disadvantages
 
-- **Scalability**: Whole system needs to be scaled together which can lead to resource wastage.
+- **Scalability**: Whole system needs to be scaled together (Vertical scaling) which can lead to resource wastage.
 - **Tight Coupling**: Changes in one part can affect the entire system.
 - **Single Point of Failure**: Single bug or failure can bring down the entire application.
 - **Slow Development**: Larger codebase makes onboarding and development slower and raises the risk of merge conflicts in larger teams.
 - **Limited Technology Stack**: Whole system is built using a single technology stack.
+- **Deployment Risk**: Deploying a small change requires redeploying the entire app.
