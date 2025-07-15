@@ -48,7 +48,7 @@ Here’s how the content is structured:
      - OSI Model, TCP/IP Model, Common Network Protocols (TCP, UDP, HTTP, HTTPS, WebSocket, FTP, SFTP, FTPS, SSH, SMTP, IMAP, POP3, WebRTC)
    - [Architectural Patterns](04_HLD_Concepts/Architectural_Patterns/README.md)
      - [Monolithic](04_HLD_Concepts/Architectural_Patterns/Monolithic.md)
-     - [Microservice](04_HLD_Concepts/Architectural_Patterns/Microservice.md)
+     - [Microservice](04_HLD_Concepts/Architectural_Patterns/Microservice/README.md)
    - [Databases](04_HLD_Concepts/Databases/README.md)
      - [CAP Theorem](04_HLD_Concepts/Databases/CAP_Theorem/README.md)
 
