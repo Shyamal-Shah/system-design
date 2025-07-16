@@ -69,3 +69,11 @@ Improve or fix the microservice based on feedback and monitoring results. Implem
 ### 6. Decommission
 
 Bring down the microservices when it is no longer needed or has been replaced. Shut down the service, clean up resources, and archive data ensuring API consumers are informed and traffic is routed away before shutdown.
+
+## Microservice Design Patterns
+
+To address the drawbacks and disadvantages associated with microservices, various design patterns are introduced. Using these patterns, one can overcome common problems encountered during designing and building applications. The patterns help dealing with challenges that may arise due to handling many independent services and reduce complexity, improve system's reliability and maintainability.
+
+I will cover the following patterns widely used while designing microservice architecture:
+
+- [Decomposition Pattern](./Decomposition_Pattern.md)

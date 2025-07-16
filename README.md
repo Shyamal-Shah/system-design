@@ -49,6 +49,7 @@ Here’s how the content is structured:
    - [Architectural Patterns](04_HLD_Concepts/Architectural_Patterns/README.md)
      - [Monolithic](04_HLD_Concepts/Architectural_Patterns/Monolithic.md)
      - [Microservice](04_HLD_Concepts/Architectural_Patterns/Microservice/README.md)
+       - [Decomposition Pattern](04_HLD_Concepts/Architectural_Patterns/Microservice/Decomposition_Pattern.md)
    - [Databases](04_HLD_Concepts/Databases/README.md)
      - [CAP Theorem](04_HLD_Concepts/Databases/CAP_Theorem/README.md)
 
