@@ -70,6 +70,43 @@ Improve or fix the microservice based on feedback and monitoring results. Implem
 
 Bring down the microservices when it is no longer needed or has been replaced. Shut down the service, clean up resources, and archive data ensuring API consumers are informed and traffic is routed away before shutdown.
 
+## Data Management in Microservice Architecture
+
+Data is the most important part of any application. In microservice architecture, there are different approaches to manage data across services. Choosing between the following approaches impacts scalability, consistency, and team autonomy:
+
+### Database per Service
+
+Each microservice manages its own database. This allows services to be independent and reduces coupling between them. If the service wants to access data from another service, it cannot directly access the database of another service, it needs to go through the API of that service.
+
+#### Advantages
+
+- Each service can use the database technology that best suits its needs.
+- The database can be scaled independently based on the service's requirements.
+- Changes to one service's database schema do not affect other services.
+
+#### Challenges
+
+- Managing database queries and transactions across services is difficult.
+- Data consistency can be a challenge, especially in distributed transactions.
+- Requires careful design of APIs to ensure data access is efficient and secure.
+- Increased operational complexity due to multiple databases to manage.
+
+### Shared Database
+
+Multiple microservices share a common database. This can simplify data management but increases coupling between services.
+
+#### Advantages
+
+- Simplified data management, as all services can access the same database.
+- Easier to maintain data consistency and integrity during transactions that involve multiple services.
+- Reduced complexity in API design, as services can directly query the shared database.
+
+#### Challenges
+
+- Increased coupling between services, making it harder to change or replace individual services.
+- Potential for performance bottlenecks, as multiple services may compete for access to the same database.
+- Changes to the shared database schema can impact all services that rely on it.
+
 ## Microservice Design Patterns
 
 To address the drawbacks and disadvantages associated with microservices, various design patterns are introduced. Using these patterns, one can overcome common problems encountered during designing and building applications. The patterns help dealing with challenges that may arise due to handling many independent services and reduce complexity, improve system's reliability and maintainability.
