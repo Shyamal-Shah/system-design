@@ -77,3 +77,4 @@ To address the drawbacks and disadvantages associated with microservices, variou
 I will cover the following patterns widely used while designing microservice architecture:
 
 - [Decomposition Pattern](./Decomposition_Pattern.md)
+- [Strangler Pattern](./Strangler_Pattern.md)
