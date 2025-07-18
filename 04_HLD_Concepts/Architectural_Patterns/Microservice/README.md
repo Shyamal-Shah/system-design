@@ -116,3 +116,4 @@ I will cover the following patterns widely used while designing microservice arc
 - [Decomposition Pattern](./Decomposition_Pattern.md)
 - [Strangler Pattern](./Strangler_Pattern.md)
 - [SAGA Pattern](./SAGA_Pattern.md)
+- [Command Query Responsibility Segregation (CQRS) Pattern](./CQRS_Pattern.md)
