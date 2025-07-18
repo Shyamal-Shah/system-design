@@ -51,6 +51,7 @@ Here’s how the content is structured:
      - [Microservice](04_HLD_Concepts/Architectural_Patterns/Microservice/README.md)
        - [Decomposition Pattern](04_HLD_Concepts/Architectural_Patterns/Microservice/Decomposition_Pattern.md)
        - [Strangler Pattern](04_HLD_Concepts/Architectural_Patterns/Microservice/Strangler_Pattern.md)
+       - [SAGA Pattern](04_HLD_Concepts/Architectural_Patterns/Microservice/SAGA_Pattern.md)
    - [Databases](04_HLD_Concepts/Databases/README.md)
      - [CAP Theorem](04_HLD_Concepts/Databases/CAP_Theorem/README.md)
 

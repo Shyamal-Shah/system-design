@@ -86,8 +86,8 @@ Each microservice manages its own database. This allows services to be independe
 
 #### Challenges
 
-- Managing database queries and transactions across services is difficult.
-- Data consistency can be a challenge, especially in distributed transactions.
+- Managing database queries and transactions across services is difficult. Can be mitigated using patterns like [CQRS](./CQRS_Pattern.md).
+- Data consistency can be a challenge, when the transaction needs to be handled by multiple services. Can be mitigated using patterns like [SAGA](./SAGA_Pattern.md).
 - Requires careful design of APIs to ensure data access is efficient and secure.
 - Increased operational complexity due to multiple databases to manage.
 
@@ -115,3 +115,4 @@ I will cover the following patterns widely used while designing microservice arc
 
 - [Decomposition Pattern](./Decomposition_Pattern.md)
 - [Strangler Pattern](./Strangler_Pattern.md)
+- [SAGA Pattern](./SAGA_Pattern.md)
